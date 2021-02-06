@@ -1,0 +1,191 @@
+<head>
+    <meta charset="UTF-8">
+    <style>
+        html {
+            width: 390px;
+            height: 185px;
+        }
+
+        body {
+            margin: 0;
+            font-family: monospace;
+            min-width: fit-content;
+            min-height: fit-content;
+            width: 390px;
+            height: 185px;
+
+            border-color: #7538e2;
+            border-style: inset;
+            border-width: thin;
+            font-weight: 900;
+
+        }
+
+        #form div {
+            margin-bottom: 5px;
+        }
+
+        input,
+        textarea {
+            border-radius: 2.5px;
+            border: none;
+            background: #e6e6e6;
+            margin-top: 2px;
+
+
+        }
+
+        input[type="text"],
+        textarea {
+            width: 99.5%;
+            margin-left: 1px;
+        }
+
+        #button {
+            color: black;
+            background: white;
+            border-radius: 2.5px;
+            border: none;
+            padding: 0.219rem .75rem;
+            box-shadow: 0 1px 3px 0 rgba(26, 24, 29, .12), 0 1px 2px 0 rgba(26, 24, 29, .24);
+            position: initial;
+            /* margin-top: unset; */
+            /* top: 1.45px; */
+            /* right: 3px; */
+            /* margin-left: 215px; */
+            margin-top: -3px;
+            float: right;
+        }
+
+        #save {
+            float: right;
+            margin-top: 4px;
+            font-weight: bolder;
+            padding: 0.219rem .75rem;
+            margin-right: 2px;
+
+        }
+
+        #success {
+            display: none;
+            color: #1ca372;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        #error {
+            display: none;
+            color: #b01515;
+            font-weight: bolder;
+            text-align: center;
+        }
+
+        .reload {
+            margin-top: 20px;
+            text-decoration: underline;
+            color: #b01515;
+        }
+
+        #title {
+            text-align: left;
+            padding: 8px;
+            background-color: #6133b4;
+            color: #ffff;
+            padding-left: 6px;
+            font-weight: bolder;
+            font-family: monospace;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        #form {
+            padding: 5px;
+        }
+
+        #notes {
+            height: 40px;
+        }
+
+        #link {
+            opacity: 0.5;
+            font-weight: 200;
+        }
+
+        #show-config {
+            opacity: 0.5;
+            font-weight: 200;
+            float: right;
+        }
+
+        #config {
+            visibility: hidden;
+        }
+
+    </style>
+    <script src="js/jquery-3.5.1.min.js">
+
+
+    </script>
+
+
+</head>
+
+<body>
+    <div id="title">
+        <span id="titext">NEW TASK</span> <span id="titconf"> [CONFIG] </span>
+        <input id="button" type="submit" value="Send">
+    </div>
+    <div id="form">
+        <div>
+            Title: <br>
+            <input type="text" id="task" />
+        </div>
+        <div>
+            Priority: <br>
+            <input type="radio" id="trivial" name="priority" value="0.1"> Trivial
+            <input type="radio" id="easy" name="priority" value="1" checked="checked"> Easy
+            <input type="radio" id="medium" name="priority" value="1.5"> Medium
+            <input type="radio" id="hard" name="priority" value="2"> Hard
+        </div>
+        <div>
+            Notes: <br>
+            <textarea id="notes" placeholder="Aditional details for the task (Optional)"></textarea>
+        </div>
+        <span id="show-config">
+      [config]
+        </span>
+    </div>
+
+
+
+
+
+    <div id="success">ASK ADDED SUCCESSFULLY
+        <div class="reload">Add another task</div>
+    </div>
+    <div id="error">ERROR
+        <div class="reload">Retry</div>
+    </div>
+    <div id="config">
+        <div>
+            Habitica User ID: <br>
+            <input type="text" id="userid" />
+        </div>
+        Habitica API Token: <br>
+        <div>
+            <input type="text" id="apit" />
+        </div>
+        <div id="link">
+
+            This data can be found here:
+            <a href="https://habitica.com/user/settings/api">https://habitica.com/user/settings/api</a>
+        </div>
+        <input id="save" type="submit" value="Save">
+
+    </div>
+
+    <script src="js/task.js">
+
+
+    </script>
+</body>

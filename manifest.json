@@ -1,0 +1,26 @@
+{
+  "name": "Habitica Add Task",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Add Tasks to Habitica in a fast and easy way, without need to load the entire Habitica website.",
+  "homepage_url": "https://sardach.uwu.mx/habitica-add-task",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "page": "src/bg/background.html",
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "icons/icon19.png",
+    "default_title": "Habitica Add Task",
+    "default_popup": "src/browser_action/browser_action.html"
+  },
+  "permissions": [
+    "https://habitica.com/*",
+    "storage"
+  ]
+}
